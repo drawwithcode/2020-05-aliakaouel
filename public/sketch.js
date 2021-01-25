@@ -43,7 +43,11 @@ function preload(){
   // put preload code here
   myworld = loadImage('myworld.png');
 
-
+  thisH1 =createElement("h1", 'Color the world,<br> create a dream <br> together');
+  thisH1.position(50, 0);
+  thisH1.style('font-family', 'mittwoch, serif')
+  thisH1.style('font-size', '50px')
+  thisH1.style('height', '10px')
 }
 
 function setup() {
@@ -59,8 +63,8 @@ function setup() {
    // pop();
 
   imageMode(CENTER);
-   image(myworld, width/2, height/2, width,height);
-   text('Color the Wold, create a dream together!')
+   image(myworld, width/2, height/2, width/1.2 ,height/1.2);
+
 }
 
 function draw() {
@@ -72,7 +76,7 @@ function mouseDragged(){
   push();
   noStroke();
   fill("pink");
-  ellipse(mouseX, mouseY, 10);
+  ellipse(mouseX, mouseY, 5);
   pop();
 
   //create message
